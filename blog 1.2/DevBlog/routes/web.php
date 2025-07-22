@@ -80,6 +80,11 @@ Route::middleware('auth')->group(function () {
 Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/{slug}', [App\Http\Controllers\PostController::class, 'show'])->name('posts.show');
 
+// Sprint 3 - Public frontend routes (IMPLEMENTED)
+Route::get('/categories', [App\Http\Controllers\CategoryController::class, 'index'])->name('categories.index');
+Route::get('/categories/{slug}', [App\Http\Controllers\CategoryController::class, 'show'])->name('categories.show');
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'index'])->name('search.index');
+
 // Sprint 3 - Future routes (upcoming)
 /*
 Route::get('/explore', [PostController::class, 'explore'])->name('posts.explore');
