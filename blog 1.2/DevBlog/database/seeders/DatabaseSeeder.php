@@ -72,6 +72,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Sprint 1 - Output success message with test account details
+        // Sprint 2 - Run category seeder for content organization
+        $this->call(CategorySeeder::class);
+        
+        // Sprint 2 - Run post seeder for demo content
+        $this->call(PostSeeder::class);
+
         $this->command->info('Sprint 1 - Sample users created successfully!');
         $this->command->info('Test accounts for DevBlog:');
         $this->command->info('- admin@devblog.com (Admin User)');
@@ -80,6 +86,6 @@ class DatabaseSeeder extends Seeder
         $this->command->info('- newuser@devblog.com (Incomplete Profile)');
         $this->command->info('- alex@devblog.com (Developer User)');
         $this->command->info('All passwords: password');
-        $this->command->info('Sprint 1 features ready for testing!');
+        $this->command->info('Sprint 2 features ready for testing!');
     }
 }

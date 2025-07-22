@@ -38,7 +38,7 @@
                         <div class="border-end">
                             <h3 class="text-primary mb-1">{{ $postCount }}</h3>
                             <p class="text-muted mb-0">Posts</p>
-                            <small class="text-muted">Sprint 2 feature</small>
+                            <small class="text-success">✅ Sprint 2 Complete</small>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -70,10 +70,10 @@
                 <p class="text-muted mb-3">
                     Your recent posts and interactions will appear here once you start writing.
                 </p>
-                <a href="#" class="btn btn-primary disabled">
+                <a href="{{ route('posts.create') }}" class="btn btn-primary">
                     <i class="fas fa-plus me-2"></i>Create Your First Post
                 </a>
-                <br><small class="text-muted mt-2">Post creation coming in Sprint 2</small>
+                <br><small class="text-success mt-2">✅ Sprint 2 Complete - Post creation ready!</small>
             </div>
         </div>
     </div>
@@ -89,6 +89,15 @@
             </div>
             <div class="card-body">
                 <div class="d-grid gap-2">
+                    <!-- Sprint 2 - Post Management Actions -->
+                    <a href="{{ route('posts.create') }}" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Write New Post
+                    </a>
+                    <a href="{{ route('posts.my') }}" class="btn btn-success">
+                        <i class="fas fa-file-alt me-2"></i>My Posts ({{ $postCount }})
+                    </a>
+                    
+                    <!-- Sprint 1 - Profile Actions -->
                     @if($user->username)
                         <a href="{{ route('profile.show', $user->username) }}" class="btn btn-outline-primary">
                             <i class="fas fa-user me-2"></i>View My Profile

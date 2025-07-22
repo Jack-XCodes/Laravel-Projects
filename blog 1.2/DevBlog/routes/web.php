@@ -63,20 +63,25 @@ Route::group([], function () {
     
 });
 
-// Sprint 1 - Future routes (commented out for upcoming sprints)
-/*
-// Sprint 2 - Post creation and management
+// Sprint 2 - Post creation and management routes (IMPLEMENTED)
 Route::middleware('auth')->group(function () {
-    Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
-    Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
-    Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
-    Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
-    Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
-    Route::get('/my-posts', [PostController::class, 'myPosts'])->name('posts.my');
+    Route::get('/posts/create', [App\Http\Controllers\PostController::class, 'create'])->name('posts.create');
+    Route::post('/posts', [App\Http\Controllers\PostController::class, 'store'])->name('posts.store');
+    Route::get('/posts/{post}/edit', [App\Http\Controllers\PostController::class, 'edit'])->name('posts.edit');
+    Route::put('/posts/{post}', [App\Http\Controllers\PostController::class, 'update'])->name('posts.update');
+    Route::delete('/posts/{post}', [App\Http\Controllers\PostController::class, 'destroy'])->name('posts.destroy');
+    Route::post('/posts/{post}/toggle-status', [App\Http\Controllers\PostController::class, 'toggleStatus'])->name('posts.toggle-status');
+    
+    // Sprint 2 - User's posts management
+    Route::get('/my-posts', [App\Http\Controllers\PostController::class, 'myPosts'])->name('posts.my');
 });
 
-// Sprint 3 - Public post viewing
-Route::get('/posts/{slug}', [PostController::class, 'show'])->name('posts.show');
+// Sprint 2 - Public post viewing (IMPLEMENTED)
+Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('posts.index');
+Route::get('/posts/{slug}', [App\Http\Controllers\PostController::class, 'show'])->name('posts.show');
+
+// Sprint 3 - Future routes (upcoming)
+/*
 Route::get('/explore', [PostController::class, 'explore'])->name('posts.explore');
 
 // Sprint 4 - Comments and interactions

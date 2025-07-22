@@ -90,14 +90,14 @@
                     </div>
                     <div class="col-md-3">
                         <div class="text-center">
-                            <i class="fas fa-clock text-muted mb-2" style="font-size: 32px;"></i>
+                            <i class="fas fa-check-circle text-success mb-2" style="font-size: 32px;"></i>
                             <h6>Sprint 2</h6>
-                            <p class="text-muted mb-0">Post Creation</p>
+                            <p class="text-muted mb-0">Post Creation & Categories</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="text-center">
-                            <i class="fas fa-clock text-muted mb-2" style="font-size: 32px;"></i>
+                            <i class="fas fa-spinner fa-spin text-primary mb-2" style="font-size: 32px;"></i>
                             <h6>Sprint 3</h6>
                             <p class="text-muted mb-0">Public Frontend</p>
                         </div>
@@ -112,11 +112,12 @@
                 </div>
                 
                 <div class="progress mt-4">
-                    <div class="progress-bar bg-success" style="width: 25%"></div>
-                    <div class="progress-bar bg-light" style="width: 75%"></div>
+                    <div class="progress-bar bg-success" style="width: 50%"></div>
+                    <div class="progress-bar bg-primary" style="width: 10%"></div>
+                    <div class="progress-bar bg-light" style="width: 40%"></div>
                 </div>
                 <div class="text-center mt-2">
-                    <small class="text-muted">Sprint 1 Complete: User Authentication & Basic Profiles</small>
+                    <small class="text-muted">Sprint 2 Complete: Post Creation & Content Organization | Sprint 3 In Progress: Public Frontend</small>
                 </div>
             </div>
         </div>
@@ -142,6 +143,14 @@
                         <div class="d-flex align-items-center mb-2">
                             <i class="fas fa-check text-success me-2"></i>
                             <span>Personal Dashboard</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Post Creation & Management</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            <span>Categories & Content Organization</span>
                         </div>
                     </div>
                     <div class="col-md-6">
