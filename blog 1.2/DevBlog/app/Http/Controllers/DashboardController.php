@@ -20,8 +20,12 @@ class DashboardController extends Controller
             'joinedDate' => $user->created_at->format('F j, Y'),
             'welcomeMessage' => $this->getWelcomeMessage($user),
             
-            // Sprint 1 - Placeholder stats for future features
-            'postCount' => 0,        // Will be implemented in Sprint 2
+            // Sprint 2 - Real post stats (IMPLEMENTED)
+            'postCount' => $user->posts()->count(),
+            'publishedCount' => $user->posts()->published()->count(),
+            'draftCount' => $user->posts()->draft()->count(),
+            
+            // Sprint 4 - Future features
             'followerCount' => 0,    // Will be implemented in Sprint 4
             'likesCount' => 0,       // Will be implemented in Sprint 4
         ];
