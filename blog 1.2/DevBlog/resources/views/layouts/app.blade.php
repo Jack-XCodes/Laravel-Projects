@@ -121,7 +121,7 @@
             color: white;
         }
         
-        /* Sprint 3 - Hero Section */
+        /* Sprint 3 - Hero Section - Fixed Readability */
         .hero-section {
             background: var(--primary-gradient);
             min-height: 70vh;
@@ -138,13 +138,18 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.1;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
         }
         
         .hero-content {
             position: relative;
-            z-index: 2;
+            z-index: 3;
+        }
+        
+        .hero-section .text-white {
+            color: #ffffff !important;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         /* Sprint 3 - Animations */
@@ -223,31 +228,188 @@
             100% { background-position: -200% 0; }
         }
         
-        /* Sprint 3 - Modern Form Elements */
+        /* Sprint 3 - Modern Form Elements - Enhanced */
         .form-control-modern {
             border: 2px solid #e2e8f0;
-            border-radius: var(--border-radius);
+            border-radius: 12px;
             padding: 1rem 1.5rem;
             background: white;
             transition: var(--transition);
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1f2937;
+        }
+        
+        .form-control-modern::placeholder {
+            color: #9ca3af;
+            font-weight: 400;
         }
         
         .form-control-modern:focus {
             border-color: #667eea;
-            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+            background-color: #fafbff;
+            outline: none;
         }
         
-        /* Sprint 3 - Badge Animations */
+        .form-control-modern:hover {
+            border-color: #cbd5e0;
+        }
+        
+        /* Modern Auth Forms */
+        .auth-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: none;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        
+        .auth-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .auth-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .auth-subtitle {
+            color: #4a5568;
+            font-size: 1rem;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+        
+        .form-group-modern {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label-modern {
+            display: block;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .btn-auth {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            border: none;
+            transition: var(--transition);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-auth-primary {
+            background: var(--primary-gradient);
+            color: white;
+        }
+        
+        .btn-auth-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+        
+        .btn-auth-outline {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-auth-outline:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-1px);
+        }
+        
+        .auth-divider {
+            position: relative;
+            text-align: center;
+            margin: 1.5rem 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .auth-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e5e7eb;
+            z-index: 1;
+        }
+        
+        .auth-divider span {
+            background: white;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .auth-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .auth-link:hover {
+            color: #5a67d8;
+            text-decoration: underline;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .remember-me input[type="checkbox"] {
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 4px;
+            border: 2px solid #d1d5db;
+            cursor: pointer;
+        }
+        
+        .remember-me input[type="checkbox"]:checked {
+            background-color: #667eea;
+            border-color: #667eea;
+        }
+        
+        .remember-me label {
+            color: #374151 !important;
+            font-weight: 500;
+        }
+        
+        /* Sprint 3 - Badge Animations - Fixed Contrast */
         .badge-modern {
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.85rem;
             transition: var(--transition);
+            color: white !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
         
         .badge-modern:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         
         /* Sprint 3 - Container Improvements */
@@ -289,7 +451,62 @@
             }
         }
         
-        /* Sprint 3 - Dark Mode Support */
+        /* Sprint 3 - Better Text Contrast */
+        .text-contrast {
+            color: #1a202c !important;
+            font-weight: 600;
+        }
+        
+        .text-light-contrast {
+            color: #4a5568 !important;
+        }
+        
+        .bg-overlay {
+            position: relative;
+        }
+        
+        .bg-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1;
+        }
+        
+        .bg-overlay > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Enhanced Alert Styles */
+        .alert-modern {
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .alert-success {
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+        }
+        
+        .alert-danger {
+            background: linear-gradient(135deg, #f56565, #e53e3e);
+            color: white;
+        }
+        
+        .alert-info {
+            background: linear-gradient(135deg, #4299e1, #3182ce);
+            color: white;
+        }
+        
+        /* Dark Mode Support - Improved */
         @media (prefers-color-scheme: dark) {
             body {
                 background: var(--dark-gradient);
@@ -297,12 +514,51 @@
             }
             
             .card-modern {
-                background: #2d3748;
+                background: rgba(45, 55, 72, 0.95);
                 color: #e2e8f0;
+                border: 1px solid rgba(255, 255, 255, 0.1);
             }
             
             .navbar-modern {
-                background: rgba(45, 55, 72, 0.95);
+                background: rgba(26, 32, 44, 0.95);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .auth-card {
+                background: #2d3748;
+                color: #e2e8f0;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .form-label-modern {
+                color: #f7fafc !important;
+            }
+            
+            .auth-subtitle {
+                color: #cbd5e0 !important;
+            }
+            
+            .remember-me label {
+                color: #e2e8f0 !important;
+            }
+            
+            .auth-divider {
+                color: #a0aec0 !important;
+            }
+            
+            .form-control-modern {
+                background: #4a5568;
+                border-color: #718096;
+                color: white;
+            }
+            
+            .form-control-modern::placeholder {
+                color: #a0aec0;
+            }
+            
+            .form-control-modern:focus {
+                background-color: #2d3748;
+                border-color: #667eea;
             }
         }
     </style>
@@ -392,8 +648,39 @@
         </div>
     </nav>
 
+    <!-- Sprint 3 - Flash Messages -->
+    @if(session('success') || session('error') || session('info'))
+        <div style="margin-top: 80px;">
+            <div class="container-modern">
+                @if(session('success'))
+                    <div class="alert alert-modern alert-success alert-dismissible fade show" role="alert">
+                        <i class="fas fa-check-circle me-2"></i>
+                        {{ session('success') }}
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"></button>
+                    </div>
+                @endif
+                
+                @if(session('error'))
+                    <div class="alert alert-modern alert-danger alert-dismissible fade show" role="alert">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        {{ session('error') }}
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"></button>
+                    </div>
+                @endif
+                
+                @if(session('info'))
+                    <div class="alert alert-modern alert-info alert-dismissible fade show" role="alert">
+                        <i class="fas fa-info-circle me-2"></i>
+                        {{ session('info') }}
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"></button>
+                    </div>
+                @endif
+            </div>
+        </div>
+    @endif
+
     <!-- Sprint 3 - Main Content with proper spacing -->
-    <main style="margin-top: 80px;">
+    <main style="margin-top: {{ session()->hasAny(['success', 'error', 'info']) ? '0' : '80px' }};">
         @yield('content')
     </main>
 

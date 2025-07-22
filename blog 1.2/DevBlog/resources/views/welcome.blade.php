@@ -9,13 +9,13 @@
         <div class="row align-items-center min-vh-70">
             <div class="col-lg-6">
                 <div class="hero-content text-white">
-                    <h1 class="display-1-modern animate-fade-left">
+                    <h1 class="display-1-modern animate-fade-left text-white">
                         Share Your
-                        <span class="d-block" style="background: linear-gradient(45deg, #fff, #a8edea); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        <span class="d-block text-white" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">
                             Developer Journey
                         </span>
                     </h1>
-                    <p class="lead-modern animate-fade-left" style="animation-delay: 0.2s;">
+                    <p class="lead-modern animate-fade-left text-white" style="animation-delay: 0.2s; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">
                         Join a community of passionate developers sharing knowledge, tutorials, and insights. 
                         Build your portfolio, grow your network, and inspire others.
                     </p>
